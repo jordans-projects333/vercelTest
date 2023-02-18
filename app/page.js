@@ -5,7 +5,7 @@ export default async function Home() {
   console.log(ggg)
   return (
     <main>
-      <h3>Login</h3>
+      <h3>{ggg.name}</h3>
     </main>
   )
 }
