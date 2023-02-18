@@ -1,10 +1,11 @@
 
 
 export default async function Home() {
-  const {name} = await fetch(`https://${process.env.VERCEL_URL}/api/hello`)
+  const mmm = await fetch(`http://localhost:3000/api/hello`, {method: 'GET'})
+  const name = await mmm.json()
   return (
     <main>
-      <h3>{name == 'undefined' ? 'boo' : 'yay'}</h3>
+      <h3>{name}</h3>
     </main>
   )
 }
