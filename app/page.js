@@ -1,7 +1,7 @@
 
 
 export default async function Home() {
-  const ggg = await fetch(`https://${process.env.VERCEL_URL}/api/hello`)
+  const ggg = await fetch(`https://${process.env.VERCEL_URL}/api/hello`).then(res => res.json())
   console.log(ggg)
   return (
     <main>
