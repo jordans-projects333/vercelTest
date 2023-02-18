@@ -4,10 +4,11 @@ export default async function Home() {
   // const data = await fetch(`${process.env.VERCEL_URL}/api/hello`)
   // const data = await fetch(`https://${VERCEL_URL}/api/hello`)
   const data = await fetch(`https://${process.env.VERCEL_URL}/api/hello`)
-  const json = await data.json()
+  
+  // const json = await data.json()
   return (
     <main>
-      <h3>{json.name}</h3>
+      <h3>{process.env.VERCEL_URL}</h3>
     </main>
   )
 }
